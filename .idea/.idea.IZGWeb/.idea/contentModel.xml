@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_IZGWeb.-1695571752.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="IZGWeb" t="IncludeRecursive">
+        <e p=".gitignore" t="Include" />
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ClientApp" t="Include">
+          <e p="node_modules/@auth0/auth0-spa-js" t="IncludeRecursive" />
+          <e p="node_modules/ajv" t="IncludeRecursive" />
+          <e p="node_modules/auth0-js" t="IncludeRecursive" />
+          <e p="node_modules/babel-eslint" t="IncludeRecursive" />
+          <e p="node_modules/bootstrap" t="IncludeRecursive" />
+          <e p="node_modules/cross-env" t="IncludeRecursive" />
+          <e p="node_modules/es-cookie" t="IncludeRecursive" />
+          <e p="node_modules/es6-promise" t="IncludeRecursive" />
+          <e p="node_modules/eslint" t="IncludeRecursive" />
+          <e p="node_modules/eslint-config-react-app" t="IncludeRecursive" />
+          <e p="node_modules/eslint-plugin-flowtype" t="IncludeRecursive" />
+          <e p="node_modules/eslint-plugin-import" t="IncludeRecursive" />
+          <e p="node_modules/eslint-plugin-jsx-a11y" t="IncludeRecursive" />
+          <e p="node_modules/eslint-plugin-react" t="IncludeRecursive" />
+          <e p="node_modules/immutable" t="IncludeRecursive" />
+          <e p="node_modules/jquery" t="IncludeRecursive" />
+          <e p="node_modules/jwt-decode" t="IncludeRecursive" />
+          <e p="node_modules/materialize-css" t="IncludeRecursive" />
+          <e p="node_modules/oidc-client" t="IncludeRecursive" />
+          <e p="node_modules/pigeon-maps" t="IncludeRecursive" />
+          <e p="node_modules/pigeon-marker" t="IncludeRecursive" />
+          <e p="node_modules/react" t="IncludeRecursive" />
+          <e p="node_modules/react-dom" t="IncludeRecursive" />
+          <e p="node_modules/react-geolocated" t="IncludeRecursive" />
+          <e p="node_modules/react-materialize" t="IncludeRecursive" />
+          <e p="node_modules/react-redux" t="IncludeRecursive" />
+          <e p="node_modules/react-router" t="IncludeRecursive" />
+          <e p="node_modules/react-router-bootstrap" t="IncludeRecursive" />
+          <e p="node_modules/react-router-dom" t="IncludeRecursive" />
+          <e p="node_modules/react-router-redux" t="IncludeRecursive" />
+          <e p="node_modules/react-scripts" t="IncludeRecursive" />
+          <e p="node_modules/reactstrap" t="IncludeRecursive" />
+          <e p="node_modules/redux" t="IncludeRecursive" />
+          <e p="node_modules/redux-oidc" t="IncludeRecursive" />
+          <e p="node_modules/redux-thunk" t="IncludeRecursive" />
+          <e p="node_modules/rimraf" t="IncludeRecursive" />
+          <e p="node_modules/symbol-observable" t="IncludeRecursive" />
+          <e p="node_modules/unfetch" t="IncludeRecursive" />
+          <e p="package-lock.json" t="Include" />
+          <e p="package.json" t="Include" />
+          <e p="public" t="Include">
+            <e p="android-chrome-144x144.png" t="Include" />
+            <e p="android-chrome-192x192.png" t="Include" />
+            <e p="android-chrome-256x256.png" t="Include" />
+            <e p="android-chrome-36x36.png" t="Include" />
+            <e p="android-chrome-384x384.png" t="Include" />
+            <e p="android-chrome-48x48.png" t="Include" />
+            <e p="android-chrome-512x512.png" t="Include" />
+            <e p="android-chrome-72x72.png" t="Include" />
+            <e p="android-chrome-96x96.png" t="Include" />
+            <e p="apple-touch-icon-precomposed.png" t="Include" />
+            <e p="apple-touch-icon.png" t="Include" />
+            <e p="browserconfig.xml" t="Include" />
+            <e p="favicon-16x16.png" t="Include" />
+            <e p="favicon-32x32.png" t="Include" />
+            <e p="favicon.ico" t="Include" />
+            <e p="index.html" t="Include" />
+            <e p="manifest.json" t="Include" />
+            <e p="mstile-144x144.png" t="Include" />
+            <e p="mstile-150x150.png" t="Include" />
+            <e p="mstile-310x150.png" t="Include" />
+            <e p="mstile-310x310.png" t="Include" />
+            <e p="mstile-70x70.png" t="Include" />
+            <e p="safari-pinned-tab.svg" t="Include" />
+            <e p="site.webmanifest" t="Include" />
+          </e>
+          <e p="README.md" t="Include" />
+          <e p="silent_renew" t="Include">
+            <e p="index.js" t="Include" />
+            <e p="silent_renew.html" t="Include" />
+          </e>
+          <e p="src" t="Include">
+            <e p="App.js" t="Include" />
+            <e p="App.test.js" t="Include" />
+            <e p="auth_config.json" t="Include" />
+            <e p="components" t="Include">
+              <e p="Callback.js" t="Include" />
+              <e p="Counter.js" t="Include" />
+              <e p="DnD" t="Include">
+                <e p="SpellCard.js" t="Include" />
+                <e p="SpellCardList.js" t="Include" />
+              </e>
+              <e p="FetchData.js" t="Include" />
+              <e p="Game" t="Include" />
+              <e p="Home.js" t="Include" />
+              <e p="Layout.js" t="Include" />
+              <e p="NavMenu.css" t="Include" />
+              <e p="NavMenu.js" t="Include" />
+              <e p="NotLoggedIn.js" t="Include" />
+              <e p="Profile.js" t="Include" />
+              <e p="SideNaveMenu" t="Include">
+                <e p="index.css" t="Include" />
+                <e p="index.js" t="Include" />
+              </e>
+            </e>
+            <e p="Images" t="Include">
+              <e p="logo.png" t="Include" />
+            </e>
+            <e p="index.js" t="Include" />
+            <e p="react-auth0-spa.js" t="Include" />
+            <e p="redux" t="Include">
+              <e p="actions" t="Include">
+                <e p="account.js" t="Include" />
+                <e p="spell.js" t="Include" />
+              </e>
+              <e p="reducers" t="Include">
+                <e p="account.js" t="Include" />
+                <e p="index.js" t="Include" />
+                <e p="spell.js" t="Include" />
+              </e>
+              <e p="store" t="Include">
+                <e p="index.js" t="Include" />
+              </e>
+            </e>
+            <e p="registerServiceWorker.js" t="Include" />
+            <e p="site.css" t="Include" />
+            <e p="utils" t="Include">
+              <e p="userManager.js" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Controllers" t="Include">
+          <e p="AccountController.cs" t="Include" />
+          <e p="BootstrapController.cs" t="Include" />
+          <e p="DnD" t="Include">
+            <e p="SpellController.cs" t="Include" />
+          </e>
+          <e p="WeatherForecastController.cs" t="Include" />
+        </e>
+        <e p="Data" t="Include">
+          <e p="class.xml" t="Include" />
+          <e p="class_table.xml" t="Include" />
+          <e p="domain.xml" t="Include" />
+          <e p="equipment.xml" t="Include" />
+          <e p="feat.xml" t="Include" />
+          <e p="item.xml" t="Include" />
+          <e p="monster.xml" t="Include" />
+          <e p="power.xml" t="Include" />
+          <e p="skill.xml" t="Include" />
+          <e p="spell.xml" t="Include" />
+        </e>
+        <e p="HasPermissionHandler.cs" t="Include" />
+        <e p="HasPermissionRequirement.cs" t="Include" />
+        <e p="HasScopeHandler.cs" t="Include" />
+        <e p="HasScopeRequirement.cs" t="Include" />
+        <e p="IZGWeb.csproj" t="IncludeRecursive" />
+        <e p="Models" t="Include">
+          <e p="WeatherForecast.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="IZGWeb.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Pages" t="Include">
+          <e p="_ViewImports.cshtml" t="Include" />
+          <e p="Error.cshtml" t="Include" />
+          <e p="Error.cshtml.cs" t="Include" />
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+      </e>
+      <e p="IZGWeb.Bootstrap" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="IZGWeb.Bootstrap.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="IZGWeb.Bootstrap.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="SpellBootstrapper.cs" t="Include" />
+      </e>
+      <e p="IZGWeb.ConsoleToolz" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Data" t="Include">
+          <e p="class.xml" t="Include" />
+          <e p="class_table.xml" t="Include" />
+          <e p="domain.xml" t="Include" />
+          <e p="equipment.xml" t="Include" />
+          <e p="feat.xml" t="Include" />
+          <e p="item.xml" t="Include" />
+          <e p="monster.xml" t="Include" />
+          <e p="power.xml" t="Include" />
+          <e p="skill.xml" t="Include" />
+          <e p="spell.xml" t="Include" />
+        </e>
+        <e p="IZGWeb.ConsoleToolz.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="IZGWeb.ConsoleToolz.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+      </e>
+      <e p="IZGWeb.Core" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Interface" t="Include">
+          <e p="ISpellService.cs" t="Include" />
+          <e p="IUserService.cs" t="Include" />
+        </e>
+        <e p="IZGWeb.Core.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="IZGWeb.Core.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="ServiceModel" t="Include">
+          <e p="AccountServiceModel.cs" t="Include" />
+          <e p="SpellServiceModel.cs" t="Include" />
+        </e>
+        <e p="SpellService.cs" t="Include" />
+        <e p="UserService.cs" t="Include" />
+      </e>
+      <e p="IZGWeb.Data" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Interface" t="Include">
+          <e p="IRepository.cs" t="Include" />
+        </e>
+        <e p="IZGWeb.Data.csproj" t="IncludeRecursive" />
+        <e p="Model" t="Include">
+          <e p="Account.cs" t="Include" />
+          <e p="BaseDocument.cs" t="Include" />
+          <e p="DnD" t="Include">
+            <e p="Spell.cs" t="Include" />
+          </e>
+        </e>
+        <e p="MongoOptions.cs" t="Include" />
+        <e p="MongoRepository.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="IZGWeb.Data.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="IZGWeb.sln" t="IncludeFlat" />
+      <e p="IZGWeb.Utilities" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Exceptions" t="Include">
+          <e p="DuplicateUserException.cs" t="Include" />
+        </e>
+        <e p="IZGWeb.Utilities.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="IZGWeb.Utilities.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

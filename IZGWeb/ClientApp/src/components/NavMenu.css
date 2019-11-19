@@ -1,0 +1,8 @@
+﻿.nav-wrapper .dropdown-content i.material-icons {
+    height: 17px;
+    line-height: 17px;
+}
+
+.nav-wrapper .dropdown-content {
+    height: auto;
+}

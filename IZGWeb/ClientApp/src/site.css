@@ -1,0 +1,4 @@
+.sidenav li .icon-nav-item {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,9 @@
+{
+    "authority": "",
+    "domain": "",
+    "clientId": "",
+    "additionalScopes": "",
+    "audience": "",
+    "responseType": "token id_token",
+    "redirectUri": ""
+}

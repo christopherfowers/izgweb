@@ -1,0 +1,123 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.0</TargetFramework>
+        <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+        <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+        <IsPackable>false</IsPackable>
+        <SpaRoot>ClientApp\</SpaRoot>
+        <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="JWT" Version="5.3.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.0.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+        <PackageReference Include="Okta.AspNetCore" Version="1.3.0" />
+        <PackageReference Include="Okta.Sdk" Version="1.4.1" />
+        <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="4.0.1" />
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="4.0.1" />
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUi" Version="4.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <!-- Don't publish the SPA source files, but do show them in the project files list -->
+        <Content Remove="$(SpaRoot)**" />
+        <Content Include="ClientApp\public\android-chrome-144x144.png" />
+        <Content Include="ClientApp\public\android-chrome-192x192.png" />
+        <Content Include="ClientApp\public\android-chrome-256x256.png" />
+        <Content Include="ClientApp\public\android-chrome-36x36.png" />
+        <Content Include="ClientApp\public\android-chrome-384x384.png" />
+        <Content Include="ClientApp\public\android-chrome-48x48.png" />
+        <Content Include="ClientApp\public\android-chrome-512x512.png" />
+        <Content Include="ClientApp\public\android-chrome-72x72.png" />
+        <Content Include="ClientApp\public\android-chrome-96x96.png" />
+        <Content Include="ClientApp\public\apple-touch-icon-precomposed.png" />
+        <Content Include="ClientApp\public\apple-touch-icon.png" />
+        <Content Include="ClientApp\public\browserconfig.xml" />
+        <Content Include="ClientApp\public\favicon-16x16.png" />
+        <Content Include="ClientApp\public\favicon-32x32.png" />
+        <Content Include="ClientApp\public\favicon.ico" />
+        <Content Include="ClientApp\public\mstile-144x144.png" />
+        <Content Include="ClientApp\public\mstile-150x150.png" />
+        <Content Include="ClientApp\public\mstile-310x150.png" />
+        <Content Include="ClientApp\public\mstile-310x310.png" />
+        <Content Include="ClientApp\public\mstile-70x70.png" />
+        <Content Include="ClientApp\public\site.webmanifest" />
+        <Content Include="ClientApp\silent_renew\index.js" />
+        <Content Include="ClientApp\silent_renew\silent_renew.html" />
+        <Content Include="ClientApp\src\auth_config.json" />
+        <Content Include="ClientApp\src\components\Callback.js" />
+        <Content Include="ClientApp\src\components\DnD\SpellCard.js" />
+        <Content Include="ClientApp\src\components\DnD\SpellCardList.js" />
+        <Content Include="ClientApp\src\components\NotLoggedIn.js" />
+        <Content Include="ClientApp\src\Images\logo.png" />
+        <Content Include="ClientApp\src\react-auth0-spa.js" />
+        <Content Include="ClientApp\src\redux\actions\spell.js" />
+        <Content Include="ClientApp\src\redux\reducers\spell.js" />
+        <Content Include="ClientApp\src\utils\userManager.js" />
+        <None Remove="$(SpaRoot)**" />
+        <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+        <None Remove="ClientApp\build\**" />
+        <Content Remove="ClientApp\build\**" />
+        <None Update="Data\spell.xml">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\IZGWeb.Bootstrap\IZGWeb.Bootstrap.csproj" />
+      <ProjectReference Include="..\IZGWeb.Core\IZGWeb.Core.csproj" />
+      <ProjectReference Include="..\IZGWeb.Data\IZGWeb.Data.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="ClientApp\src\components\Game" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="ClientApp\build\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="ClientApp\build\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Resource Include="Data\feat.xml">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Page Include="Data\power.xml" />
+    </ItemGroup>
+
+    <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
+        <!-- Ensure Node.js is installed -->
+        <Exec Command="node --version" ContinueOnError="true">
+            <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+        </Exec>
+        <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+        <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+        <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+    </Target>
+
+    <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+        <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+        <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+        <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build" />
+
+        <!-- Include the newly-built files in the publish output -->
+        <ItemGroup>
+            <DistFiles Include="$(SpaRoot)build\**; $(SpaRoot)build-ssr\**" />
+            <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+                <RelativePath>%(DistFiles.Identity)</RelativePath>
+                <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+                <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            </ResolvedFileToPublish>
+        </ItemGroup>
+    </Target>
+
+</Project>
