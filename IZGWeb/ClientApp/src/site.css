@@ -4,15 +4,15 @@
 }
 
 .main-content {
-    min-height: calc(100vh - 132px);
+    min-height: calc(100vh - 202px);
 }
 
 @media only screen and (min-width: 601px) {
     .main-content {
-        min-height: calc(100vh - 160px);
+        min-height: calc(100vh - 208px);
     }
 }
 
-.footer-copyright {
-    display: none;
-}
+/*.footer-copyright {*/
+/*    display: none;*/
+/*}*/
