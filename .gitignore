@@ -3,3 +3,5 @@ obj/
 /packages/
 node_modules
 */node_modules
+izgweb.tar
+.DS_Store

@@ -1,0 +1,32 @@
+version: "2"
+
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /etc/nginx/certs
+      - /etc/nginx/vhost.d
+      - /usr/share/nginx/html
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+
+  nginx-proxy-companion:
+    image: jrcs/letsencrypt-nginx-proxy-companion
+    volumes_from:
+      - nginx-proxy
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      - "DEFAULT_EMAIL=chris.w.fowers@gmail.com"
+
+  izgweb:
+    image: cwfowers/izgweb
+    ports:
+      - "8080:80"
+    environment:
+      - "VIRTUAL_HOST=*.islandzgames.com"
+      - "VIRTUAL_PORT=8080"
+      - "LETSENCRYPT_HOST=islandzgames.com"
+      - "LETSENCRYPT_EMAIL=chris.w.fowers@gmail.com"

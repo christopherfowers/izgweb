@@ -23,13 +23,7 @@ let HomeComponent = class Home extends Component {
     render() {
         return(
             <div style={{width: '100vw'}}>
-                {
-                    this.props.user ? this.props.user.access_token : null
-                }
-                <p />
-                {
-                    this.props.user ? this.props.user.id_token : null
-                }
+                IZG Private Gaming Community. Application is under development so expect bugs and missing / broken features.
             </div>
         )
     }
