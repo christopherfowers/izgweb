@@ -1,18 +1,24 @@
+html, body {
+    max-width: 100vw;
+}
+
+@media only screen and (min-width: 1200px) {
+    .main-content {
+        max-width: 1200px;
+        margin: auto;
+    }
+}
+
 .sidenav li .icon-nav-item {
     display: flex;
     justify-content: space-between;
 }
 
-.main-content {
-    min-height: calc(100vh - 202px);
+.footer-copyright {
+    display: none;
 }
 
-@media only screen and (min-width: 601px) {
-    .main-content {
-        min-height: calc(100vh - 208px);
-    }
+.page-footer.container.row.col {
+    height: auto;
+    max-height: 32px
 }
-
-/*.footer-copyright {*/
-/*    display: none;*/
-/*}*/

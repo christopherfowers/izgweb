@@ -2,18 +2,16 @@ using IZGWeb.Core;
 using IZGWeb.Core.Interface;
 using IZGWeb.Data;
 using IZGWeb.Data.Interface;
+using IZGWeb.Logger;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Okta.AspNetCore;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace IZGWeb
@@ -49,6 +47,10 @@ namespace IZGWeb
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("read:gamedata", policy => policy.Requirements.Add(new HasPermissionRequirement("read:gamedata", domain)));
+                options.AddPolicy("create:gamedata", policy => policy.Requirements.Add(new HasPermissionRequirement("create:gamedata", domain)));
+                options.AddPolicy("edit:gamedata", policy => policy.Requirements.Add(new HasPermissionRequirement("edit:gamedata", domain)));
+                options.AddPolicy("delete:gamedata", policy => policy.Requirements.Add(new HasPermissionRequirement("delete:gamedata", domain)));
+                options.AddPolicy("read:users", policy => policy.Requirements.Add(new HasPermissionRequirement("read:users", domain)));
             });
             #endregion
             
@@ -64,6 +66,8 @@ namespace IZGWeb
             services.AddTransient<IRepository, MongoRepository>();
             services.AddSingleton<IUserService, UserService>();
             services.AddSingleton<ISpellService, SpellService>();
+            
+            services.AddSingleton<ILogger>(new LogglyLogger(Configuration["Loggly:ApiKey"]));
             
             services.AddSingleton<IAuthorizationHandler, HasPermissionHandler>();
 

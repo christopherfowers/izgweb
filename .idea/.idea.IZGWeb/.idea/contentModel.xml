@@ -31,6 +31,7 @@
           <e p="node_modules/oidc-client" t="IncludeRecursive" />
           <e p="node_modules/pigeon-maps" t="IncludeRecursive" />
           <e p="node_modules/pigeon-marker" t="IncludeRecursive" />
+          <e p="node_modules/prop-types" t="IncludeRecursive" />
           <e p="node_modules/react" t="IncludeRecursive" />
           <e p="node_modules/react-dom" t="IncludeRecursive" />
           <e p="node_modules/react-geolocated" t="IncludeRecursive" />
@@ -87,22 +88,34 @@
             <e p="auth_config.json" t="Include" />
             <e p="components" t="Include">
               <e p="Callback.js" t="Include" />
+              <e p="Controls" t="Include" />
               <e p="Counter.js" t="Include" />
               <e p="DnD" t="Include">
                 <e p="SpellCard.js" t="Include" />
                 <e p="SpellCardList.js" t="Include" />
+                <e p="SpellList.js" t="Include" />
               </e>
               <e p="FetchData.js" t="Include" />
               <e p="Game" t="Include" />
               <e p="Home.js" t="Include" />
               <e p="Layout.js" t="Include" />
+              <e p="Login.js" t="Include" />
               <e p="NavMenu.css" t="Include" />
               <e p="NavMenu.js" t="Include" />
               <e p="NotLoggedIn.js" t="Include" />
+              <e p="Paginator.js" t="Include" />
               <e p="Profile.js" t="Include" />
+              <e p="ProtectedLink.js" t="Include" />
+              <e p="ProtectedRoute.js" t="Include" />
               <e p="SideNaveMenu" t="Include">
                 <e p="index.css" t="Include" />
                 <e p="index.js" t="Include" />
+              </e>
+              <e p="UserManagement" t="Include">
+                <e p="UserDashboard.js" t="Include" />
+                <e p="UserDetail.js" t="Include" />
+                <e p="UserList.css" t="Include" />
+                <e p="UserList.js" t="Include" />
               </e>
             </e>
             <e p="Images" t="Include">
@@ -114,11 +127,13 @@
               <e p="actions" t="Include">
                 <e p="account.js" t="Include" />
                 <e p="spell.js" t="Include" />
+                <e p="users.js" t="Include" />
               </e>
               <e p="reducers" t="Include">
                 <e p="account.js" t="Include" />
                 <e p="index.js" t="Include" />
                 <e p="spell.js" t="Include" />
+                <e p="users.js" t="Include" />
               </e>
               <e p="store" t="Include">
                 <e p="index.js" t="Include" />
@@ -132,11 +147,11 @@
           </e>
         </e>
         <e p="Controllers" t="Include">
-          <e p="AccountController.cs" t="Include" />
           <e p="BootstrapController.cs" t="Include" />
           <e p="DnD" t="Include">
             <e p="SpellController.cs" t="Include" />
           </e>
+          <e p="UserManagementController.cs" t="Include" />
           <e p="WeatherForecastController.cs" t="Include" />
         </e>
         <e p="Data" t="Include">
@@ -157,6 +172,7 @@
         <e p="HasScopeRequirement.cs" t="Include" />
         <e p="IZGWeb.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
+          <e p="AccessToken.cs" t="Include" />
           <e p="WeatherForecast.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -253,6 +269,20 @@
           <e p="Debug" t="Include">
             <e p="netcoreapp3.0" t="Include">
               <e p="IZGWeb.Data.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="IZGWeb.Logger" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ILogger.cs" t="Include" />
+        <e p="IZGWeb.Logger.csproj" t="IncludeRecursive" />
+        <e p="LogglyLogger.cs" t="Include" />
+        <e p="LogLevel.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="IZGWeb.Logger.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>

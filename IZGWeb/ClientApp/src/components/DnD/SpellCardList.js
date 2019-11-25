@@ -1,22 +1,50 @@
-import React from "react";
-import { Collapsible, CollapsibleItem, Icon } from "react-materialize"
+import React, {useState, useEffect} from "react";
+import {TextInput, Collapsible, CollapsibleItem, Icon, Pagination} from "react-materialize"
+import {connect} from "react-redux";
+import {getSpells} from "../../redux/actions/spell";
+
+import SpellList from "./SpellList";
 
 function SpellCardList(props) {
-    let spellCards = [];
+    const [filter, setFilter] = useState('');
+    const [currentPage, setCurrentPage] = useState(1);
     
-    for(let i = 0; i < props.spells.length; i++) {
-        let spell = props.spells[i];
-        spellCards.push(
-            <CollapsibleItem header={spell.name} icon={<Icon>menu</Icon>} key={spell.id}>
-                <div dangerouslySetInnerHTML={{ __html: spell.description }} />
-            </CollapsibleItem>
-        );
-    }
+    let filteredSpells = props.spells.spells.filter(s => s.name.indexOf(filter) >= 0);
+    let pages = Math.ceil(filteredSpells.slice().length / 10);
+    
     return (
-        <Collapsible accordion={false}>
-            {spellCards}
-        </Collapsible>
-    )
+        <div style={{display: "block"}}>
+            <div>
+                <TextInput
+                    icon="search" 
+                    label="Search spells"
+                    onChange={(e) => { 
+                        setFilter(e.target.value);
+                    }} />
+            </div>
+            <SpellList filterText={filter} activePage={currentPage}/>
+            {
+                pages > 1 ?
+                    <div style={{display: 'flex', justifyContent: 'space-around', textAlign: 'center'}}>
+                        <Pagination activePage={currentPage} maxButtons={pages} onSelect={(selectedPage) => setCurrentPage(selectedPage)} />
+                    </div> :
+                    null
+            }
+        </div>
+    );
 }
 
-export default SpellCardList;
+const mapStateToProps = (state, ownProps) => {
+    return {
+        spells: state.spells,
+        user: state.oidc.user
+    }
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        getSpells: () => dispatch(getSpells())
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(SpellCardList);

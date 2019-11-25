@@ -1,9 +1,10 @@
 import React from "react";
+import userManager from "../utils/userManager";
 
 function NotLoggedIn(props) {
     return (
       <div>
-          Please Log In. 
+          Please <a onClick={() => userManager.signinRedirect()}>Log In.</a>
       </div>  
     );
 } 

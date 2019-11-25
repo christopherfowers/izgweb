@@ -1,0 +1,6 @@
+.col {
+    display: flex;
+    height: 32px;
+    flex-direction: column;
+    justify-content: space-around;
+}

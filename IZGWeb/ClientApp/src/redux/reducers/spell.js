@@ -6,7 +6,7 @@ import {
 
 const initialState = {
     spells: [],
-    error: null,
+    error: "",
     isLoading: false
 };
 
@@ -18,20 +18,20 @@ export default (state, action) => {
             return {
                 ...state,
                 spells: action.spells,
-                error: null,
+                error: "",
                 isLoading: false
             };
         case REQUEST_SPELLS:
             return {
                 ...state,
-                error: null,
+                error: "",
                 isLoading: true
             };
         case RECEIVE_SPELLS_EXCEPTION:
             return {
                 ...state,
-                profileError: action.error,
-                isLoading: false
+                error: action.error,
+                isLoading: true
             };
         default:
             return {

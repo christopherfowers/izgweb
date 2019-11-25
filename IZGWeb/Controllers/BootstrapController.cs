@@ -4,8 +4,11 @@ using System.Linq;
 using IZGWeb.Bootstrap;
 using IZGWeb.Data.Interface;
 using IZGWeb.Data.Model.DnD;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
+
+//TODO extract all bootstraping from the web application and put them into an external non-published tool
 namespace IZGWeb.Controllers
 {
     [Route("api/[controller]")]
@@ -21,6 +24,7 @@ namespace IZGWeb.Controllers
         }
         
         [HttpGet("[action]")]
+        [Authorize("bootstrap:gamedata")]
         public IActionResult Spell()
         {
             if (_repository.CollectionExists<Spell>().GetAwaiter().GetResult())

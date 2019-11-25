@@ -18,8 +18,7 @@ namespace IZGWeb.Controllers.DnD
         {
             _spellService = spellService;
         }
-        
-        
+
         [Authorize("read:gamedata")]
         [HttpGet("[action]")]
         public IActionResult AllSpells()

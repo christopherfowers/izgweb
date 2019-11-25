@@ -51,5 +51,6 @@
     "theme_color": "#9d8132",
     "background_color": "#9d8132",
     "start_url": "https://www.islandzgames.com",
-    "display": "standalone"
+    "display": "standalone",
+    "orientation": "portrait"
 }

@@ -11,11 +11,11 @@
 
     <ItemGroup>
         <PackageReference Include="JWT" Version="5.3.1" />
+        <PackageReference Include="LocalStorage" Version="2.0.0" />
         <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.0.0" />
         <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.0.0" />
         <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
-        <PackageReference Include="Okta.AspNetCore" Version="1.3.0" />
-        <PackageReference Include="Okta.Sdk" Version="1.4.1" />
+        <PackageReference Include="RestSharp" Version="106.6.10" />
         <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="4.0.1" />
         <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="4.0.1" />
         <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUi" Version="4.0.1" />
@@ -51,11 +51,22 @@
         <Content Include="ClientApp\src\components\Callback.js" />
         <Content Include="ClientApp\src\components\DnD\SpellCard.js" />
         <Content Include="ClientApp\src\components\DnD\SpellCardList.js" />
+        <Content Include="ClientApp\src\components\DnD\SpellList.js" />
+        <Content Include="ClientApp\src\components\Login.js" />
         <Content Include="ClientApp\src\components\NotLoggedIn.js" />
+        <Content Include="ClientApp\src\components\Paginator.js" />
+        <Content Include="ClientApp\src\components\ProtectedLink.js" />
+        <Content Include="ClientApp\src\components\ProtectedRoute.js" />
+        <Content Include="ClientApp\src\components\UserManagement\UserDashboard.js" />
+        <Content Include="ClientApp\src\components\UserManagement\UserDetail.js" />
+        <Content Include="ClientApp\src\components\UserManagement\UserList.css" />
+        <Content Include="ClientApp\src\components\UserManagement\UserList.js" />
         <Content Include="ClientApp\src\Images\logo.png" />
         <Content Include="ClientApp\src\react-auth0-spa.js" />
         <Content Include="ClientApp\src\redux\actions\spell.js" />
+        <Content Include="ClientApp\src\redux\actions\users.js" />
         <Content Include="ClientApp\src\redux\reducers\spell.js" />
+        <Content Include="ClientApp\src\redux\reducers\users.js" />
         <Content Include="ClientApp\src\utils\userManager.js" />
         <None Remove="$(SpaRoot)**" />
         <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
@@ -70,9 +81,11 @@
       <ProjectReference Include="..\IZGWeb.Bootstrap\IZGWeb.Bootstrap.csproj" />
       <ProjectReference Include="..\IZGWeb.Core\IZGWeb.Core.csproj" />
       <ProjectReference Include="..\IZGWeb.Data\IZGWeb.Data.csproj" />
+      <ProjectReference Include="..\IZGWeb.Logger\IZGWeb.Logger.csproj" />
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="ClientApp\src\components\Controls" />
       <Folder Include="ClientApp\src\components\Game" />
     </ItemGroup>
 
