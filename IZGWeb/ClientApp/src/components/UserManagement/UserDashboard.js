@@ -1,3 +1,5 @@
+import "./UserList.css";
+
 import React, { useState } from "react";
 import {connect} from "react-redux";
 import {getUsers} from "../../redux/actions/users";
@@ -5,11 +7,9 @@ import {Pagination} from "react-materialize"
 
 import UserList from "./UserList";
 
-import "./UserList.css";
-
 function UserDasheboard(props) {
     const [currentPage, setCurrentPage] = useState(1);
-
+    
     return (
         <div style={{display: 'block'}}>
             <UserList activePage={currentPage} rowsPerPage={10} />

@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {Collapsible, CollapsibleItem, Icon, Pagination} from "react-materialize";
 import {getSpells} from "../../redux/actions/spell";
 import {connect} from "react-redux";
-import UserList from "../UserManagement/UserList";
+import Loading from "../Utility/Loading";
 
 function SpellList(props) {
     let spellCards = [];
@@ -24,6 +24,8 @@ function SpellList(props) {
             </CollapsibleItem>
         );
     }
+    if(props.spells.isLoading)
+        return <Loading style={{height: 64, width: 64, position: 'absolute', top: 'calc(50vh - 32px)', left: 'calc(50vw - 32px)'}} />;
 
     return (
         <React.Fragment>

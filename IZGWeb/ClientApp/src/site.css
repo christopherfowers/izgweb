@@ -9,6 +9,16 @@ html, body {
     }
 }
 
+.input-field .prefix ~ input, 
+.input-field .prefix ~ textarea, 
+.input-field .prefix ~ label, 
+.input-field .prefix ~ .validate ~ label, 
+.input-field .prefix ~ .helper-text, 
+.input-field .prefix ~ .autocomplete-content {
+    margin-bottom: 0;
+}
+
+
 .sidenav li .icon-nav-item {
     display: flex;
     justify-content: space-between;

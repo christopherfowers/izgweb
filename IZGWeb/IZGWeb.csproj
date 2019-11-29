@@ -61,12 +61,16 @@
         <Content Include="ClientApp\src\components\UserManagement\UserDetail.js" />
         <Content Include="ClientApp\src\components\UserManagement\UserList.css" />
         <Content Include="ClientApp\src\components\UserManagement\UserList.js" />
+        <Content Include="ClientApp\src\components\Utility\Loading.css" />
+        <Content Include="ClientApp\src\components\Utility\Loading.js" />
+        <Content Include="ClientApp\src\Images\loading.png" />
         <Content Include="ClientApp\src\Images\logo.png" />
         <Content Include="ClientApp\src\react-auth0-spa.js" />
         <Content Include="ClientApp\src\redux\actions\spell.js" />
         <Content Include="ClientApp\src\redux\actions\users.js" />
         <Content Include="ClientApp\src\redux\reducers\spell.js" />
         <Content Include="ClientApp\src\redux\reducers\users.js" />
+        <Content Include="ClientApp\src\utils\httpClientUtils.js" />
         <Content Include="ClientApp\src\utils\userManager.js" />
         <None Remove="$(SpaRoot)**" />
         <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />

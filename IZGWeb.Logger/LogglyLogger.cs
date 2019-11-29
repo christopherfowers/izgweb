@@ -17,9 +17,7 @@ namespace IZGWeb.Logger
             var request = new RestRequest(Method.POST);
             request.AddHeader("content-type", "application/json");
             request.AddJsonBody(new { message = message, eventDateTime = logTime, loglevel = logLevel});
-            Console.WriteLine("LOGGING\rLOGGING\rLOGGING\rLOGGING\rLOGGING\rLOGGING\rLOGGING\rLOGGING\rLOGGING\rLOGGING");
             var response = client.Execute(request);
-            Console.WriteLine(response.StatusCode);
         }
     }
 }

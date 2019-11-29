@@ -117,8 +117,13 @@
                 <e p="UserList.css" t="Include" />
                 <e p="UserList.js" t="Include" />
               </e>
+              <e p="Utility" t="Include">
+                <e p="Loading.css" t="Include" />
+                <e p="Loading.js" t="Include" />
+              </e>
             </e>
             <e p="Images" t="Include">
+              <e p="loading.png" t="Include" />
               <e p="logo.png" t="Include" />
             </e>
             <e p="index.js" t="Include" />
@@ -142,6 +147,7 @@
             <e p="registerServiceWorker.js" t="Include" />
             <e p="site.css" t="Include" />
             <e p="utils" t="Include">
+              <e p="httpClientUtils.js" t="Include" />
               <e p="userManager.js" t="Include" />
             </e>
           </e>

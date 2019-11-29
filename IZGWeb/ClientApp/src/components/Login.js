@@ -1,8 +1,7 @@
 import React from "react";
 import {connect} from "react-redux"
 import userManager from "../utils/userManager";
-import {Button} from "react-materialize"
-import {Card} from "reactstrap";
+import { Card, Button} from "react-materialize"
 import {Redirect} from "react-router-dom";
 
 function Login(props) {

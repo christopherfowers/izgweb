@@ -19,7 +19,7 @@ export default (state, action) => {
             return {
                 ...state,
                 error: "",
-                isLoading: false,
+                isLoading: true,
                 lastCompleted: Date.now()
             };
         case RECEIVE_USER_LIST:
@@ -27,14 +27,14 @@ export default (state, action) => {
                 ...state,
                 users: action.users,
                 error: "",
-                isLoading: true,
+                isLoading: false,
                 lastCompleted: Date.now()
             };
         case RECEIVE_USER_LIST_EXCEPTION:
             return {
                 ...state,
                 error: action.error,
-                isLoading: true,
+                isLoading: false,
                 lastCompleted: Date.now()
             };
         default:

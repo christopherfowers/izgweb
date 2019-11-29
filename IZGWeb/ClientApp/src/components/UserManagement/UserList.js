@@ -2,16 +2,17 @@ import React from "react";
 import PropTypes from "prop-types";
 import {connect} from "react-redux";
 import {getUsers} from "../../redux/actions/users";
-import {Col, Table, Icon} from "react-materialize"
+import {Table, Icon} from "react-materialize"
 
 import "./UserList.css";
 import { useHistory } from "react-router-dom";
+import Loading from "../Utility/Loading";
 
 function UserListItem(props) {
     let history = useHistory();
     return (
         <tr onClick={() => {history.push(`/manage-users/user/${props.user.user_id}`)}}>
-            <td>
+            <td style={{textAlign: "center"}}>
                 <img style={{height: 32, width: 32, borderRadius: 17}} src={props.user.picture} alt={"profile"}/>
             </td>
             <td>
@@ -20,7 +21,7 @@ function UserListItem(props) {
             <td className={"hide-on-small-only"}>
                 {props.user.email}
             </td>
-            <td>
+            <td style={{textAlign: "center"}}>
                 <Icon>chevron_right</Icon>
             </td>
         </tr>
@@ -37,9 +38,12 @@ function UserList(props) {
     for( let i = 0; i < props.currentUsers.length; i++){
         users.push(<UserListItem key={i} user={props.currentUsers[i]} />)
     }
+
+    if(props.users.isLoading)
+        return <Loading style={{height: 64, width: 64, position: 'absolute', top: 'calc(50vh - 32px)', left: 'calc(50vw - 32px)'}} />;
     
     return (
-        <Table responsive={true}>
+        <Table responsive={false} hoverable={true}>
             <thead className={"hide-on-small-only"}>
                 <tr>
                     <th data-field={"picture"}>

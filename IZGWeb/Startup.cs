@@ -44,14 +44,7 @@ namespace IZGWeb
                 options.Audience = Configuration["Auth0:ApiIdentifier"];
             });
             
-            services.AddAuthorization(options =>
-            {
-                options.AddPolicy("read:gamedata", policy => policy.Requirements.Add(new HasPermissionRequirement("read:gamedata", domain)));
-                options.AddPolicy("create:gamedata", policy => policy.Requirements.Add(new HasPermissionRequirement("create:gamedata", domain)));
-                options.AddPolicy("edit:gamedata", policy => policy.Requirements.Add(new HasPermissionRequirement("edit:gamedata", domain)));
-                options.AddPolicy("delete:gamedata", policy => policy.Requirements.Add(new HasPermissionRequirement("delete:gamedata", domain)));
-                options.AddPolicy("read:users", policy => policy.Requirements.Add(new HasPermissionRequirement("read:users", domain)));
-            });
+            services.AddAuthorization(options => { AddPermissionsRequirements(options, domain); });
             #endregion
             
             var mongoConnectionString = Configuration.GetSection("ConnectionStrings:MongoDb").Value;
@@ -118,6 +111,20 @@ namespace IZGWeb
                     spa.UseReactDevelopmentServer(npmScript: "start");
                 }
             });
+        }
+        
+        private static void AddPermissionsRequirements(AuthorizationOptions options, string domain)
+        {
+            options.AddPolicy("read:gamedata",
+                policy => policy.Requirements.Add(new HasPermissionRequirement("read:gamedata", domain)));
+            options.AddPolicy("create:gamedata",
+                policy => policy.Requirements.Add(new HasPermissionRequirement("create:gamedata", domain)));
+            options.AddPolicy("edit:gamedata",
+                policy => policy.Requirements.Add(new HasPermissionRequirement("edit:gamedata", domain)));
+            options.AddPolicy("delete:gamedata",
+                policy => policy.Requirements.Add(new HasPermissionRequirement("delete:gamedata", domain)));
+            options.AddPolicy("read:users",
+                policy => policy.Requirements.Add(new HasPermissionRequirement("read:users", domain)));
         }
     }
 }
