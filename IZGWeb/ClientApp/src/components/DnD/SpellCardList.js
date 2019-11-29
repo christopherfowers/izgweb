@@ -18,7 +18,8 @@ function SpellCardList(props) {
                 <TextInput
                     icon="search" 
                     label="Search spells"
-                    onChange={(e) => { 
+                    onChange={(e) => {
+                        if (currentPage > 1) setCurrentPage(1);
                         setFilter(e.target.value);
                     }} />
             </div>
