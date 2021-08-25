@@ -12,7 +12,7 @@
     <ItemGroup>
         <PackageReference Include="JWT" Version="5.3.1" />
         <PackageReference Include="LocalStorage" Version="2.0.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.18" />
         <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.0.0" />
         <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
         <PackageReference Include="RestSharp" Version="106.6.10" />
